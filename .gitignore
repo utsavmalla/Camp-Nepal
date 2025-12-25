@@ -1,0 +1,13 @@
+# .gitignore file for CampNepal project
+
+# Ignore node modules
+node_modules/
+# Ignore build output
+dist/
+build/
+# Ignore environment variable files
+.env
+.env.local
+.env.development.local
+.env.test.local 
+.env.production.local

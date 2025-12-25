@@ -1,0 +1,56 @@
+Run the project locally
+
+Prerequisites:
+- Node.js installed (v12+ recommended)
+- MongoDB running locally (default URL: mongodb://localhost:27017)
+
+Steps:
+1. Open a terminal and change to the project folder:
+   cd "c:\Users\user\Utsav Folder\My Projects\webdevpactice\CampNepal"
+
+2. Install dependencies:
+   npm install
+
+3. Ensure MongoDB is running locally. If you have the daemon available, you can run:
+   mongod
+   (or start the MongoDB service using your OS tools / MongoDB Desktop)
+
+4. Seed the database (optional):
+   If you want initial sample data, run the seeds script:
+   node seeds/index.js
+
+5. Start the app:
+   node app.js
+
+6. Open the app in your browser:
+   http://localhost:3000
+
+Optional development convenience:
+- Install nodemon for automatic restarts during development:
+  npm install -D nodemon
+  npx nodemon app.js
+
+Notes:
+- The app connects to MongoDB at mongodb://localhost:27017/camp-nepal (hard-coded in `app.js`).
+- Port: 3000 (set in `app.js`).
+- If you want a start script, add to `package.json`:
+   "scripts": {
+      "start": "node app.js",
+      "dev": "nodemon app.js"
+   }
+
+Technologies used
+
+- Node.js: JavaScript runtime used to run the server.
+- Express: Web framework handling routes and middleware.
+- EJS + ejs-mate: Templating engine and layout helper for views.
+- MongoDB: Database (connected via mongodb://localhost:27017/camp-nepal).
+- Mongoose: ODM used to model application data and communicate with MongoDB.
+- Joi: Input validation for request bodies (`schemas.js`).
+- method-override: Support for PUT/DELETE from HTML forms.
+- JavaScript, HTML, CSS: Frontend templates and assets (in `views/`).
+- npm: Package manager for installing dependencies and scripts.
+
+Notes:
+- The main app entry is `app.js` and the views live under the `views/` folder.
+- Seed data lives in the `seeds/` folder and can be loaded with `node seeds/index.js`.
